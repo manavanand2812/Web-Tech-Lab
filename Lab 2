@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="lab1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>CV</title>
+        <body>
+            
+            <h1 style="text-align: center;">CV</h1>
+            <h1 style="text-align: center;">Manav Anand</h1>
+            <img src="linkden manav.jpg">
+            <h2>Personal Summary</h2>
+            <p>I am a Btech Computer Science student with a 
+                specalization in IoT. I am a keen learner. I
+                like making and building things to make life easier.
+            </p>
+
+
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    Maharishi vidya Mandir - class 10 <br>
+                    2019
+                </li>
+                <li>
+                    Maharishi vidya Mandir - class 12 <br>
+                    2021
+                </li>
+                <li>
+                    Shiv Nadar University - Btech CSe (IoT) <br>
+                    2021-2025
+                </li>
+            </ul>
+
+
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <b>Gaming light set up usign arduino</b> <br>
+                    We built a gaming light set up for the gamers using arduino 
+                    and led lights. We had a wise range of colors to choose from.
+                </li>
+                <li>
+                    <b>RFID based bus detection</b> <br>
+                    We built a RFID based bus detectin for the blind. This 
+                    device helps the blind detect what bus is arriving at the stop.
+                    A tag will be placed on the bus and the bus detail will be stored in that.
+                    A reader will be installed in every bus stop. The reader reads the tag and 
+                    will voice out the information through a speaker.
+                </li>
+            </ul>
+
+
+            <h2>Languages</h2>
+            <ul>
+                <li>C programming</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>HTMl</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+            
+
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Good Communication</li>
+                <li>Leadership</li>
+                <li>Team player</li>
+                <li>Professionalism</li>
+                <li>Research</li>
+            </ul>
+
+            <h2>Personal Details</h2>
+            <b>Contact:</b>9035011016 <br>
+            <b>Mail:</b>manavanand28@gmail.com <br>
+            <b>Linkedin:</b>Manav Anand
+
+            <h2>Socials</h2>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+
+        </body>
+        
+    </head>
+</html>
+
+CSS
+
+html{
+height: fit-content;
+background-image: linear-gradient(to bottom right,rgb(3, 3,
+196),rgb(7, 0, 108));
+}
+h2{
+font-family:'Times New Roman', Times, serif;
+font-style: italic;
+}
+body{
+color:aliceblue;
+}
+img{
+border-radius: 50%;
+width: 30%;}
