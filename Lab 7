@@ -1,0 +1,77 @@
+1) Index.js
+
+const express = require("express");
+const app = express();
+const port = 8080;
+
+app.get("/users", (req,res)=>{
+    res.send({data:"Here is your data"});
+});
+
+app.post("/users",(req,res)=>{
+    res.send({data:"user created"});
+});
+
+app.put("/users", (req,res)=>{
+    res.send({data:"user updated"});
+});
+
+app.delete("/users",(req,res)=>{
+    res.send({data:"user deleted"});
+});
+
+const userRoute = require("./routes/User");
+const comentsRoute = require("./routes/Comments");
+app.use("/user",userRoute);
+app.use("/comments",commentsRoute);
+
+app.listen(port , ()=>{
+    console.log("server running");
+});
+
+2) User,js
+
+const express = require("express");
+const router = express.Router()
+
+router.get("/",(req,res)=>{
+    res.send("user data");
+});
+
+router.post("/",(req,res)=>{
+    res.send("user created");
+});
+
+router.put("/",(req,res)=>{
+    res.send("user updated");
+});
+
+router.delete("/",(req,res)=>{
+    res.send("user deleted");
+});
+
+module.exports = router;
+
+
+3) Comments.js
+
+const express = require("express");
+const router = express.Router()
+
+router.get("/",(req,res)=>{
+    res.send("user data");
+});
+
+router.post("/",(req,res)=>{
+    res.send("user created");
+});
+
+router.put("/",(req,res)=>{
+    res.send("user updated");
+});
+
+router.delete("/",(req,res)=>{
+    res.send("user deleted");
+});
+
+module.exports = comments;
