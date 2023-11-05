@@ -1,0 +1,20 @@
+html{
+    height: fit-content;
+    background-image: linear-gradient(to bottom right,rgb(3, 3, 196),rgb(7, 0, 108));
+    
+}
+
+h2{
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+body{
+    color:aliceblue;
+}
+
+img{
+    border-radius: 50%;
+    width: 150;
+    
+}
