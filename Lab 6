@@ -1,0 +1,112 @@
+1) Lab6.js
+
+const http = require('http')
+const fs = require('fs')
+const port = 3000
+
+const server = http.createServer(function(req,res){
+    res.writeHead(200,{'Content-Type' : 'text/html'})
+    fs.readFile('index.html', function(error,data){
+        if(error){
+            res.writeHead(404)
+            res.write('error:file not found')
+        }else{
+            res.write(data)
+        }
+        res.end()
+    })
+    
+    
+})
+
+server.listen(port,function(error){
+    if(error){
+        console.log("error",error)
+    }
+    else{
+        console.log("running" + port)
+    }
+})
+
+
+2) Index.html
+
+<html>
+<head>
+<script>
+alert("fill the form carefully")
+</script>
+<form id="form" action="Form.html"></form>
+<link rel="stylesheet" href="Form.css">
+<title>Form</title>
+<body>
+<form id="form">
+<h1>Form</h1>
+<h2>Name</h2>
+<input type="text" placeholder="First Name"><input
+type="text" placeholder="Middle Name"><input type="text"
+placeholder="Last Name">
+<h2>Birth Date</h2>
+<input type="date" name="dob" id="dob">
+<h2>Gender</h2>
+<select name="g" id="g">
+<option value="m">Male</option>
+<option value="f">Female</option>
+</select>
+<h2>Address</h2>
+<input type="text" placeholder="Address line 1"><br>
+<input type="text" placeholder="Address line 2"><br>
+<input type="text" placeholder="city"> <input
+type="text" placeholder="State"><br>
+<input type="text" placeholder="Zipcode">
+<h2>Student Mail Id</h2>
+<input type="text" placeholder="ex:name@example.com">
+<h2>Mobile Number</h2><input type="text" placeholder="Enter number">
+<h2>Course</h2>
+<select name="course" id="course">
+<option value="iot">Btech IoT</option>
+<option value="ai">Btech AI&DS</option>
+<option value="cyber">Btech Cyber</option>
+</select><br>
+<br><br>
+<input type="submit" class="submit" button
+onclick="m()"> <input type="reset" class="reset" onclick="r()"
+value="reset">
+<script>
+function m(){
+confirm("Press Ok to confirm submission");
+}
+function r(){
+document.getElementById("form").reset();
+}
+</script>
+</form>
+</body>
+</head>
+</html>
+
+
+
+
+3) Form.css
+h1{
+    text-align: center;
+    }
+    input[type=text]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing : border-box;
+    }
+    html{
+    background: rgb(154, 220, 242);
+    }
+    .submit{
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50
+    }
+    .submit:hover{
+    background-color: #4CAF50;
+    color: white
+    }
